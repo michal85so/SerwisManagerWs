@@ -25,4 +25,9 @@ public class AddressServiceImpl implements AddressService{
 		return dao.findAllAddresses();
 	}
 
+	@Override
+	public Address findAddress(int id) {
+		return dao.findAddress(id);
+	}
+
 }
