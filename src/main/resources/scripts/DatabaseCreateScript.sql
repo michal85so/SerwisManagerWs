@@ -30,7 +30,7 @@ create table address (
 	state_id int not null,
 
 	primary key(id),
-	foreign key(city_id) references dictionary_of_city(id)
+	foreign key(city_id) references dictionary_of_city(id),
 	foreign key(state_id) references dictionary_of_state(id)
 );
 
