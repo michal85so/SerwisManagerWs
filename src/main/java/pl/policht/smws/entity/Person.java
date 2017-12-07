@@ -1,11 +1,6 @@
 package pl.policht.smws.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -39,13 +34,13 @@ public class Person {
 	
 	private String email;
 	
-	@Column(name="person_status_id")
-	private int personStatusId;
+	@OneToOne(fetch = FetchType.LAZY)
+	private PersonStatus personStatus;
 	
 	private String nip;
 	
 	private String regon;
 	
-	@Column(name="address_id")
-	private int addressId;
+	@OneToOne(fetch = FetchType.LAZY)
+	private Address address;
 }

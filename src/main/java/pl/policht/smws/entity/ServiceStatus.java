@@ -11,11 +11,12 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="dictionary_of_service_status")
+@Table(name="service_status")
 public class ServiceStatus {
 	
 	@Id
 	private int id;
+
 	private String name;
 	
 	@SuppressWarnings("serial")
@@ -26,6 +27,11 @@ public class ServiceStatus {
 	}};
 	
 	public static int getKeyByValue(String value) {
+		listOfStatus.entrySet().stream()
+				.filter(i -> i.getValue().equals(value))
+				.findFirst()
+				.get()
+				.getKey();
 		for (java.util.Map.Entry<Integer, String> entry : listOfStatus.entrySet()) {
 			if (entry.getValue().equals(value))
 				return entry.getKey();

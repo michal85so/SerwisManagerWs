@@ -2,11 +2,7 @@ package pl.policht.smws.entity;
 
 import java.time.LocalDate;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,8 +20,8 @@ public class Service {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	
-	@Column(name="client_id", nullable=false)
-	private int clientId;
+	@OneToOne
+	private Person client;
 	
 	@Column(name="service_name", nullable=false)
 	private String serviceName;
@@ -38,8 +34,8 @@ public class Service {
 	@Column(name="date_of_receipt")
 	private LocalDate dateOfReceipt;
 	
-	@Column(name="service_status_id", nullable=false)
-	private int serviceStatusId;
+	@OneToOne
+	private ServiceStatus serviceStatus;
 	
 	@Column(name="facture_id")
 	private int factureId;

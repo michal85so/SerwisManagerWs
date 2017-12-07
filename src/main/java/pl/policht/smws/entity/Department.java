@@ -1,18 +1,18 @@
 package pl.policht.smws.entity;
 
-import javax.persistence.Column;
+import lombok.Data;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
-import lombok.Data;
+import javax.persistence.OneToOne;
 
 @Data
 @Entity
 public class Department {
-	
-	@Id
-	private int id;
-	
-	@Column(name="address_id")
-	private int addressId;
+
+    @Id
+    private int id;
+
+    @OneToOne
+    private Address address;
 }

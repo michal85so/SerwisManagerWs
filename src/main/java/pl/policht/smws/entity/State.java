@@ -9,12 +9,12 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="dictionary_of_state")
+@Table(name="state")
 public class State {
 	
 	@Id
 	private int id;
+
+	private String name;
 	
-	@Column(name="address_id")
-	private int addressId;
 }

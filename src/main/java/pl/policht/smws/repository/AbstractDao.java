@@ -10,11 +10,11 @@ public abstract class AbstractDao {
 	private SessionFactory sessionFactory;
 	
 	protected Session getSession() {
-		return sessionFactory.getCurrentSession();
+		return sessionFactory.openSession();
 	}
 	
-	public void persist(Object object) {
-		getSession().persist(object);
+	public void save(Object object) {
+		getSession().save(object);
 	}
 	
 	public void delete(Object object) {

@@ -13,7 +13,7 @@ public class AddressDaoImpl extends AbstractDao implements AddressDao{
 
 	@Override
 	public void saveAddress(Address address) {
-		persist(address);
+		save(address);
 	}
 
 	@SuppressWarnings("unchecked")

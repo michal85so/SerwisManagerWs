@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="dictionary_of_city")
+@Table(name="city")
 public class City {
 	
 	@Id

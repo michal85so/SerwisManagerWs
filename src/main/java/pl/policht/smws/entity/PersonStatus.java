@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="dictionary_of_person_status")
+@Table(name="person_status")
 public class PersonStatus {
 	
 	@Id
