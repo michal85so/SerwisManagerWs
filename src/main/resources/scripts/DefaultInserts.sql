@@ -9,8 +9,12 @@ insert into dictionary_of_service_status(name) values('new');
 insert into dictionary_of_service_status(name) values('in progress');
 insert into dictionary_of_service_status(name) values('done');
 insert into dictionary_of_service_status(name) values('received');
+
 insert into dictionary_of_city(name) values('default');
+
 insert into dictionary_of_state(name) values('default');
+
 insert into address(city_id,post_code,street,state_id) values(1,'default','default',1);
-INSERT INTO `sm`.`person` (`login`,`password`,`first_name`,`last_name`,`status_id`,`address_id`,`phone_number`,`email`,`nip`,`regon`)
+
+INSERT INTO person (login,password,first_name,last_name,status_id,address_id,phone_number,email,nip,regon)
 					VALUES('default','default','default','default',1,1,'default','default','default','default');
