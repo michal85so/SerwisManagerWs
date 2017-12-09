@@ -19,23 +19,4 @@ public class ServiceStatus {
 
 	private String name;
 	
-	@SuppressWarnings("serial")
-	public static Map<Integer, String> listOfStatus = new HashMap<Integer, String>() {{ 
-		put(2, "serviceman");
-		put(3, "seller");
-		put(4, "client");
-	}};
-	
-	public static int getKeyByValue(String value) {
-		listOfStatus.entrySet().stream()
-				.filter(i -> i.getValue().equals(value))
-				.findFirst()
-				.get()
-				.getKey();
-		for (java.util.Map.Entry<Integer, String> entry : listOfStatus.entrySet()) {
-			if (entry.getValue().equals(value))
-				return entry.getKey();
-		}
-		return 0;
-	}
 }

@@ -34,7 +34,7 @@ public class Service {
 	@Column(name="date_of_receipt")
 	private LocalDate dateOfReceipt;
 	
-	@OneToOne
+	@ManyToOne
 	private ServiceStatus serviceStatus;
 	
 	@Column(name="facture_id")
